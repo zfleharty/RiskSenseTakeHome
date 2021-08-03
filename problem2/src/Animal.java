@@ -1,7 +1,9 @@
 public abstract class Animal {
     enum Size{SMALL,MEDIUM,LARGE}
     private String name;
+    private Size size;
 
+    
     public Size getSize() {
         return size;
     }
@@ -10,7 +12,6 @@ public abstract class Animal {
         this.size = size;
     }
 
-    private Size size;
     public String getName()
         {
             return name;
@@ -19,6 +20,5 @@ public abstract class Animal {
     public void setName(String nameGiven) {
         name = nameGiven;
     }
-
 
 }

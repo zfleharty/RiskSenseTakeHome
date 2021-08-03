@@ -1,6 +1,5 @@
-public class frog extends Animal implements Croak{
+public class frog extends Animal implements Croak, Jump{
     enum niche {AQUATIC,LAND,TREE}
-
 
     private niche Environment;
     private int PoisonLevel;
@@ -12,20 +11,29 @@ public class frog extends Animal implements Croak{
         Environment = habitat;
     }
 
-
+    @Override
     public void croak() {
         System.out.println("I croak!");
     }
-
+    @Override
     public void jump() {
         System.out.println("I jump!");
     }
 
-    public niche getEnvironment() {return Environment;}
-    public void setEnvironment(niche environment) { Environment = environment; }
+    public niche getEnvironment() {
+	return Environment;
+    }
 
-    public int getPoisionLevel() {return PoisonLevel;}
-    public void setPoisonLevel(int poisonLevel) { PoisonLevel = poisonLevel; }
+    public void setEnvironment(niche environment) {
+	Environment = environment;
+    }
 
+    public int getPoisionLevel() {
+	return PoisonLevel;
+    }
+    
+    public void setPoisonLevel(int poisonLevel) {
+	PoisonLevel = poisonLevel;
+    }
 
 }

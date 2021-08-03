@@ -11,11 +11,11 @@ public class dog extends Animal implements Bark, Jump{
         this.breed = breed;
     }
 
-
+    @Override
     public void bark() {
         System.out.println("I bark");
     }
-
+    @Override
     public void jump() {
         System.out.println("I jump!");
     }
